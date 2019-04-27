@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2019 at 07:18 PM
+-- Generation Time: Mar 27, 2019 at 05:59 PM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -17,21 +17,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dreamhome`
+-- Database: `std6102041520092`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `branch`
+-- Table structure for table `private_owner`
 --
 
-CREATE TABLE `branch` (
+CREATE TABLE `private_owner` (
   `id` int(11) NOT NULL,
-  `branch_no` varchar(5) NOT NULL,
-  `street` varchar(50) NOT NULL,
-  `city` varchar(50) NOT NULL,
-  `postcode` varchar(50) NOT NULL
+  `owner_no` varchar(5) NOT NULL,
+  `first_name` varchar(300) NOT NULL,
+  `last_name` varchar(300) NOT NULL,
+  `address` text,
+  `telephone` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -39,9 +40,9 @@ CREATE TABLE `branch` (
 --
 
 --
--- Indexes for table `branch`
+-- Indexes for table `private_owner`
 --
-ALTER TABLE `branch`
+ALTER TABLE `private_owner`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -49,9 +50,9 @@ ALTER TABLE `branch`
 --
 
 --
--- AUTO_INCREMENT for table `branch`
+-- AUTO_INCREMENT for table `private_owner`
 --
-ALTER TABLE `branch`
+ALTER TABLE `private_owner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

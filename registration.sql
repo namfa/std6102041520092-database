@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2019 at 07:18 PM
+-- Generation Time: Mar 27, 2019 at 06:01 PM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -23,15 +23,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `branch`
+-- Table structure for table `registration`
 --
 
-CREATE TABLE `branch` (
+CREATE TABLE `registration` (
   `id` int(11) NOT NULL,
+  `client_no` varchar(10) NOT NULL,
   `branch_no` varchar(5) NOT NULL,
-  `street` varchar(50) NOT NULL,
-  `city` varchar(50) NOT NULL,
-  `postcode` varchar(50) NOT NULL
+  `staff_no` varchar(10) NOT NULL,
+  `date_joined` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -39,9 +39,9 @@ CREATE TABLE `branch` (
 --
 
 --
--- Indexes for table `branch`
+-- Indexes for table `registration`
 --
-ALTER TABLE `branch`
+ALTER TABLE `registration`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -49,9 +49,9 @@ ALTER TABLE `branch`
 --
 
 --
--- AUTO_INCREMENT for table `branch`
+-- AUTO_INCREMENT for table `registration`
 --
-ALTER TABLE `branch`
+ALTER TABLE `registration`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
